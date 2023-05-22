@@ -1,0 +1,2 @@
+CREATE USER [intern2021] FOR LOGIN [intern2021]
+GO

@@ -1,0 +1,12 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE FUNCTION [dbo].[tfinlinetable] (@parameter NVARCHAR(MAX))
+RETURNS TABLE
+AS
+RETURN
+(SELECT AddressLine1, PersonID
+ FROM dbo.Address
+ WHERE City = @parameter)
+GO
